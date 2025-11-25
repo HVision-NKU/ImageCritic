@@ -100,3 +100,7 @@ If you find this project useful for your research, please consider citing our [p
 
 ## 📧 Contact
 If you have any comments or questions, please [open a new issue]() or contact [Ziheng Ouyang](zihengouyang666@gmail.com) 
+
+## License
+Licensed under a [Creative Commons Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/) for Non-commercial use only.
+Any commercial use should get formal permission first.
