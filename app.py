@@ -58,7 +58,7 @@ detail_encoder = None
 def load_models():
     global device, pipeline, transformer, detail_encoder
 
-    if pipeline is not None and transformer is not None and detail_encoder is not None:
+    if pipeline is not None:
         return
 
     print("CUDA 可用：", torch.cuda.is_available())
