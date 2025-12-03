@@ -74,17 +74,10 @@ def load_models():
     )
     pipeline_local.to(device)
 
-    print("加载 FluxTransformer2DModel...")
-    transformer_local = FluxTransformer2DModel.from_pretrained(
-        "./kontext",
-        subfolder="transformer",
-        torch_dtype=dtype,
-    )
-    transformer_local.to(device)
 
     print("加载 detail_encoder 权重...")
     state_dict = load_file(detail_encoder_path)
-    detail_encoder_local = DetailEncoder().to(dtype=transformer_local.dtype, device=device)
+    detail_encoder_local = DetailEncoder().to(dtype=pipeline_local.transformer.dtype, device=device)
     detail_encoder_local.to(device)
 
     with torch.no_grad():
@@ -93,7 +86,6 @@ def load_models():
                 added = state_dict[name].to(param.device)
                 param.add_(added)
 
-    pipeline_local.transformer = transformer_local
     pipeline_local.detail_encoder = detail_encoder_local
 
     print("加载 LoRA...")
@@ -103,7 +95,6 @@ def load_models():
 
     # 写回全局变量
     pipeline = pipeline_local
-    transformer = transformer_local
     detail_encoder = detail_encoder_local
 
 def extract_first_box(annotations: dict):
