@@ -29,18 +29,28 @@ pip install -r requirements.txt
 ```
 
 ## ⚡ Quick Inference
+
+
+
 ### Tips
 Due to copyright issues, we have embedded the download of the kontext model weights in the inference code below, You can run following inference code directly.
 If you have already downloaded the corresponding model, you can comment out the related code and directly replace the inference path.
 
-### Single case inference
-```bash
-python infer.py
-```
+
 
 ### Local Gradio Demo
 ```bash
 python app.py
+```
+
+### How to use
+During testing, if the details that need to be fixed are located in a very low-resolution area, you should expand the bounding box to cover a larger region. Try to include both the target area to be fixed and some of the surrounding context, as illustrated in the example.
+
+Since the method is based on local inpainting, it cannot replace objects when the difference is too large. If you need to replace an entire object, you must manually paint a black mask (using any drawing tool) over the part to be replaced, and then feed it into the model to perform the replacement.
+
+### Single case inference
+```bash
+python infer.py
 ```
 
 ### Single Model Download 
