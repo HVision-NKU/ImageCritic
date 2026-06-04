@@ -8,6 +8,7 @@ Reference-Guided Attentive Alignment**
 <a href="https://huggingface.co/spaces/ziheng1234/ImageCritic"><img src="https://img.shields.io/badge/🤗_HuggingFace-Space-ffbd45.svg" alt="HuggingFace"></a>
 <a href="https://huggingface.co/ziheng1234/ImageCritic"><img src="https://img.shields.io/badge/🤗_HuggingFace-Model-ffbd45.svg" alt="HuggingFace"></a>
 <a href="https://huggingface.co/datasets/ziheng1234/Critic-10K"><img src="https://img.shields.io/badge/🤗_HuggingFace-Dataset-ffbd45.svg" alt="HuggingFace"></a>
+<a href="https://huggingface.co/datasets/ziheng1234/CriticBench"><img src="https://img.shields.io/badge/🤗_HuggingFace-Benchmark-ffbd45.svg" alt="HuggingFace"></a>
 
 <img src='./figure/teaser.png' width='100%' />
 
